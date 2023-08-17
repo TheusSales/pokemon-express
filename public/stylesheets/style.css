@@ -1,8 +1,37 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+body{
+  font-family: 'Varela Round', sans-serif;
+  background-color: #232323;
 }
 
-a {
-  color: #00B7FF;
+h1{
+  text-align: center;
+  color: #dc0a2d;
+}
+section{
+  text-align: center;
+  padding-bottom: 30px;
+}
+.container {
+  text-align: center;
+}
+
+#res {
+  background-color: #28acff;
+  display: inline-block;
+  border: 2px solid black;
+  border-radius: 20%;
+  padding: 10px;
+  margin: 0 auto; /* Centralizar horizontalmente */
+  max-width: 80%; /* Limitar a largura máxima */
+}
+
+img{
+  width: 150px;
+  height: 150px;
+}
+
+footer{
+  padding-top: 18%;
+  text-align: center;
+  color: #dedede;
 }
