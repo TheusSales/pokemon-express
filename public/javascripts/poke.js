@@ -2,7 +2,6 @@ var container = document.getElementById('container');
 
 async function buscar(){
     try {
-        let pokeNameInput = document.getElementById('entra'); // Obtém o elemento input
         let pokeName = pokeNameInput.value.toLowerCase(); // Obtém o valor do input e converte para minúsculas
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokeName}`);
         var data = await response.json();
