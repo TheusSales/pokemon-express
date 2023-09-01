@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 const bodyParser = require('body-parser');
 const app = express();
+const fetch = require('node-fetch');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -14,20 +15,26 @@ router.get('/', function(req, res, next) {
   res.render('index.html');
 });
 
+
 router.post('/', async function(req, res) {
-  const itemDigitado = req.body.texto;
+  const itemDigitado = req.body.texto; 
   try {
     let pokeName = itemDigitado.toLowerCase(); // Obtém o valor do input e converte para minúsculas
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokeName}`);
     var data = await response.json();
 
-    const pokemonData = filtrarJSON(data)
-
+    var pokemonData = filtrarJSON(data)
+    console.log(pokemonData);
+    res.json(pokemonData);
     
 } catch (error) {
     res.send(`Ocorreu um erro: ${error}`);
-}
+  }
 });
+
+
+// router.get('/', async function(req, res, next) {
+// });
 
 function filtrarJSON(data){
   let pokemonData = {

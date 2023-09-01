@@ -12,7 +12,8 @@
     "express": "^4.18.2",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
-    "pug": "^2.0.4"
+    "node-fetch": "^2.7.0",
+    "pug": "^3.0.2"
   },
   "main": "app.js",
   "repository": {
@@ -25,5 +26,6 @@
     "url": "https://github.com/TheusSales/pokemon-express/issues"
   },
   "homepage": "https://github.com/TheusSales/pokemon-express#readme",
-  "description": ""
+  "description": "",
+  "proxy":"http://localhost:3002"
 }
